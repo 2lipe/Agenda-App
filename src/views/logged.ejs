@@ -1,0 +1,34 @@
+<%- include('includes/head') %>
+<%- include('includes/navbar') %>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-5 col-lg-3 d-md-block bg-light sidebar collapse">
+      <div class="sidebar-sticky pt-5">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><h4>Meus contatos</h4></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><h5>Cadastrar contatos</h5></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><h5>Meu Perfil</h5></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sair</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2"><%= user.name %></h1>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<%- include('includes/footer') %>

@@ -1,0 +1,41 @@
+<%- include('includes/head') %>
+<%- include('includes/navbar') %>
+
+<section class="container">
+    <div class="row">
+      <div class="col-lg-2"></div>
+
+      <div class="col-lg-8 my-3">
+        <h1 class="text-center">Agenda-App</h1>
+        <p class="text-center lead">Gerencie seus contatos</p>
+
+        <%- include('includes/messages') %>
+
+        <div class="row">
+          <div class="col-lg my-5">
+            <h4>Faça seu login</h4>
+            <p>Entre em nosso sistema abaixo e comece a gerenciar seus contatos</p>
+
+            <form class="form-login" action="/login/login" method="POST">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" class="form-control" name="email" required>
+              </div>
+              <div class="form-group">
+                <label>Senha</label>
+                <input type="password" class="form-control" name="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-2"></div>
+    </div>
+</section>
+
+<%- include('includes/footer') %>
