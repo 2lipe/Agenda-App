@@ -1,0 +1,49 @@
+<%- include('includes/head') %>
+<%- include('includes/navbar') %>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Contatos</h1>
+      <p class="lead text-muted">Aqui estão os seus contatos, adicione, altere, exclua ou encontre algum contato.</p>
+      <p><a href="/form-contato/" class="btn btn-primary my-2">Adicionar contato</a></p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2"></div>
+  
+      <div class="col-lg-8 my-3">
+
+        <%- include('includes/messages') %>
+
+        <% if (contatos.length > 0) { %>
+        <div class="responsive-table">
+          <table class="table my-3">
+            <% contatos.forEach(contato => { %>
+            <tr>
+              <td><%= contato.name %></td>
+              <td><%= contato.last_name %></td>
+              <td><%= contato.telephone %></td>
+              <td><%= contato.email %></td>
+              <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
+              <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
+            </tr>
+            <% }); %>
+          </table>
+        </div>
+        <% } else { %>
+          <p class="text-center lead">Não existem contatos na sua agenda.</p>
+        <% } %>
+
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+
+</main>
+  
+
+<%- include('includes/footer') %>
