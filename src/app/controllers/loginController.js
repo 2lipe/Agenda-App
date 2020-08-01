@@ -1,5 +1,4 @@
 const Login = require('../models/LoginModel');
-const { localsName } = require('ejs');
 
 exports.index = (req, res) => {
   if (req.session.user) return res.render('logged');
@@ -10,7 +9,7 @@ exports.login = async (req, res) => {
   try {
     const login = new Login(req.body);
     await login.auth();
-  
+
     if (login.errors.length > 0) {
       req.flash('errors', login.errors);
       req.session.save(() => {

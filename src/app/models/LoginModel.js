@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('./User');
 
-const authConfig = require('../config/auth.json');
+const authConfig = require('../../config/auth.json');
 
 class Login {
   constructor(body) {
@@ -51,7 +51,7 @@ class Login {
 
     this.body = {
       email: this.body.email,
-      password: this.body.password
+      password: this.body.password,
     }
   }
 

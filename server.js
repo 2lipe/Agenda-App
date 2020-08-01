@@ -6,11 +6,11 @@ const csrf = require('csurf');
 
 const sessionOption = require('./src/database/index');
 const routes = require('./routes');
-const { 
-  msgMiddleware, 
-  checkCsrfError, 
-  csrfMiddleware 
-} = require('./src/middlewares/middlewares');
+const {
+  msgMiddleware,
+  checkCsrfError,
+  csrfMiddleware
+} = require('./src/app/middlewares/middlewares');
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(sessionOption);
 app.use(flash());
 
-app.set('views', path.resolve(__dirname, 'src', 'views'));
+app.set('views', path.resolve(__dirname, 'src', 'app', 'views'));
 app.set('view engine', 'ejs');
 
 app.use(csrf());

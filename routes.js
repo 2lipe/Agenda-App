@@ -1,12 +1,12 @@
 const express = require('express');
-const homeController = require('./src/controllers/homeController');
-const registerController = require('./src/controllers/registerController');
-const loginController = require('./src/controllers/loginController');
-const loggedController = require('./src/controllers/loggedController');
-const contatoController = require('./src/controllers/contatoController');
-const contatoFormController = require('./src/controllers/contato-formController');
+const homeController = require('./src/app/controllers/homeController');
+const registerController = require('./src/app/controllers/registerController');
+const loginController = require('./src/app/controllers/loginController');
+const loggedController = require('./src/app/controllers/loggedController');
+const contatoController = require('./src/app/controllers/contatoController');
+const contatoFormController = require('./src/app/controllers/contato-formController');
 
-const { loginRequired } = require('./src/middlewares/middlewares');
+const { loginRequired } = require('./src/app/middlewares/middlewares');
 
 const route = express.Router();
 
