@@ -5,7 +5,7 @@ Simples aplicação utilizando o modelo FULL MVC
 ## Funcionalidade
 
 A aplicação conta com um cadastro/login de usuários onde só é realizado o acesso a aplicação após a autenticação
-dos dados com o os dados cadastrados no bando de dados MongoDB, após a autenticação o usuário ira possuir acesso
+dos dados com o os dados cadastrados no banco de dados MongoDB, após a autenticação o usuário ira possuir acesso
 a aplicação onde poderá cadastrar, modificar ou excluir contatos(agenda).
 
 ## Técnologias utilizadas
